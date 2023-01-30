@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E382FFE-2552-4F97-84AA-7269234A756C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DormitoryManagement.UI</RootNamespace>
+    <AssemblyName>DormitoryManagement.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.6\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BunkFrm\AddBunkFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BunkFrm\AddBunkFrm.Designer.cs">
+      <DependentUpon>AddBunkFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BunkFrm\BunkListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BunkFrm\BunkListFrm.Designer.cs">
+      <DependentUpon>BunkListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BunkFrm\UpdBunkFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BunkFrm\UpdBunkFrm.Designer.cs">
+      <DependentUpon>UpdBunkFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department\DepartmentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department\DepartmentAdd.Designer.cs">
+      <DependentUpon>DepartmentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department\DepartmentListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department\DepartmentListFrm.Designer.cs">
+      <DependentUpon>DepartmentListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department\DepartmentUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department\DepartmentUpd.Designer.cs">
+      <DependentUpon>DepartmentUpd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChartHelper.cs" />
+    <Compile Include="Common\ConfigNpoiCell.cs" />
+    <Compile Include="DormitoryDetailDTOFrm\DormitoryDetailDTOListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormitoryDetailDTOFrm\DormitoryDetailDTOListFrm.Designer.cs">
+      <DependentUpon>DormitoryDetailDTOListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormitoryDetailDTOFrm\DormitorystatisticsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormitoryDetailDTOFrm\DormitorystatisticsFrm.Designer.cs">
+      <DependentUpon>DormitorystatisticsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormitoryFrm\AddDormitoryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormitoryFrm\AddDormitoryFrm.Designer.cs">
+      <DependentUpon>AddDormitoryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormitoryFrm\DormitoryListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormitoryFrm\DormitoryListFrm.Designer.cs">
+      <DependentUpon>DormitoryListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormitoryFrm\UpdDormitoryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormitoryFrm\UpdDormitoryFrm.Designer.cs">
+      <DependentUpon>UpdDormitoryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffCheckInFrm\AddStaffCheckInFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffCheckInFrm\AddStaffCheckInFrm.Designer.cs">
+      <DependentUpon>AddStaffCheckInFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffCheckInFrm\StaffCheckInListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffCheckInFrm\StaffCheckInListFrm.Designer.cs">
+      <DependentUpon>StaffCheckInListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffCheckInFrm\UpdStaffCheckInFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffCheckInFrm\UpdStaffCheckInFrm.Designer.cs">
+      <DependentUpon>UpdStaffCheckInFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffFrm\AddStaffFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffFrm\AddStaffFrm.Designer.cs">
+      <DependentUpon>AddStaffFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffFrm\StaffIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffFrm\StaffIndex.Designer.cs">
+      <DependentUpon>StaffIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffFrm\StaffListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffFrm\StaffListFrm.Designer.cs">
+      <DependentUpon>StaffListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffFrm\UpdStaffFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffFrm\UpdStaffFrm.Designer.cs">
+      <DependentUpon>UpdStaffFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffStaffStayOutFrm\StaffStaffStayOutListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffStaffStayOutFrm\StaffStaffStayOutListFrm.Designer.cs">
+      <DependentUpon>StaffStaffStayOutListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffStayOutFrm\AddStaffStayOutFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffStayOutFrm\AddStaffStayOutFrm.Designer.cs">
+      <DependentUpon>AddStaffStayOutFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffStayOutFrm\StaffStayOutListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffStayOutFrm\StaffStayOutListFrm.Designer.cs">
+      <DependentUpon>StaffStayOutListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffStayOutFrm\UpdStaffStayOutFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffStayOutFrm\UpdStaffStayOutFrm.Designer.cs">
+      <DependentUpon>UpdStaffStayOutFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StationInfo\StationAddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StationInfo\StationAddFrm.Designer.cs">
+      <DependentUpon>StationAddFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StationInfo\StationListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StationInfo\StationListFrm.Designer.cs">
+      <DependentUpon>StationListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StationInfo\StationUpdFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StationInfo\StationUpdFrm.Designer.cs">
+      <DependentUpon>StationUpdFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StayoutFrm\StayoutListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StayoutFrm\StayoutListFrm.Designer.cs">
+      <DependentUpon>StayoutListFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BunkFrm\AddBunkFrm.resx">
+      <DependentUpon>AddBunkFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BunkFrm\BunkListFrm.resx">
+      <DependentUpon>BunkListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BunkFrm\UpdBunkFrm.resx">
+      <DependentUpon>UpdBunkFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department\DepartmentAdd.resx">
+      <DependentUpon>DepartmentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department\DepartmentListFrm.resx">
+      <DependentUpon>DepartmentListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department\DepartmentUpd.resx">
+      <DependentUpon>DepartmentUpd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormitoryDetailDTOFrm\DormitoryDetailDTOListFrm.resx">
+      <DependentUpon>DormitoryDetailDTOListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormitoryDetailDTOFrm\DormitorystatisticsFrm.resx">
+      <DependentUpon>DormitorystatisticsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormitoryFrm\AddDormitoryFrm.resx">
+      <DependentUpon>AddDormitoryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormitoryFrm\DormitoryListFrm.resx">
+      <DependentUpon>DormitoryListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormitoryFrm\UpdDormitoryFrm.resx">
+      <DependentUpon>UpdDormitoryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StaffCheckInFrm\AddStaffCheckInFrm.resx">
+      <DependentUpon>AddStaffCheckInFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffCheckInFrm\StaffCheckInListFrm.resx">
+      <DependentUpon>StaffCheckInListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffCheckInFrm\UpdStaffCheckInFrm.resx">
+      <DependentUpon>UpdStaffCheckInFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffFrm\AddStaffFrm.resx">
+      <DependentUpon>AddStaffFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffFrm\StaffIndex.resx">
+      <DependentUpon>StaffIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffFrm\StaffListFrm.resx">
+      <DependentUpon>StaffListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffFrm\UpdStaffFrm.resx">
+      <DependentUpon>UpdStaffFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffStaffStayOutFrm\StaffStaffStayOutListFrm.resx">
+      <DependentUpon>StaffStaffStayOutListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffStayOutFrm\AddStaffStayOutFrm.resx">
+      <DependentUpon>AddStaffStayOutFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffStayOutFrm\StaffStayOutListFrm.resx">
+      <DependentUpon>StaffStayOutListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffStayOutFrm\UpdStaffStayOutFrm.resx">
+      <DependentUpon>UpdStaffStayOutFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StationInfo\StationAddFrm.resx">
+      <DependentUpon>StationAddFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StationInfo\StationListFrm.resx">
+      <DependentUpon>StationListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StationInfo\StationUpdFrm.resx">
+      <DependentUpon>StationUpdFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StayoutFrm\StayoutListFrm.resx">
+      <DependentUpon>StayoutListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DormitoryManagement.BLL\DormitoryManagement.BLL.csproj">
+      <Project>{14a38e34-9939-4887-a2cc-e71a4d9ebb09}</Project>
+      <Name>DormitoryManagement.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DormitoryManagement.Common\DormitoryManagement.Common.csproj">
+      <Project>{87d78f42-aaa9-48ae-98e3-343a27f07f16}</Project>
+      <Name>DormitoryManagement.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DormitoryManagement.Model\DormitoryManagement.Model.csproj">
+      <Project>{697b02b5-cc72-4f6c-8dd7-59b9d2e65c03}</Project>
+      <Name>DormitoryManagement.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\一伊那尔栖4k壁纸_彼岸图网.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
