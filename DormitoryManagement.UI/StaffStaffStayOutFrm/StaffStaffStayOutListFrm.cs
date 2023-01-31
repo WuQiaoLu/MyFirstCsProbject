@@ -33,6 +33,7 @@ namespace DormitoryManagement.UI.StaffStaffStayOutFrm
             InitializeComponent();
             dpQSTime.Value = Convert.ToDateTime("2021-01-01");
             dpZZTime.Value = Convert.ToDateTime("2023-12-12");
+            GetStaffStaffStayOut();
         }
 
         /// <summary>
@@ -42,6 +43,8 @@ namespace DormitoryManagement.UI.StaffStaffStayOutFrm
         /// <param name="e"></param>
         private void StaffStaffStayOutListFrm_Load(object sender, EventArgs e)
         {
+            dpQSTime.Value = Convert.ToDateTime("2021-01-01");
+            dpZZTime.Value = Convert.ToDateTime("2023-12-12");
             GetStaffStaffStayOut();
         }
 
